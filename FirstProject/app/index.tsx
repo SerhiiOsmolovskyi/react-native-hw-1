@@ -1,9 +1,9 @@
 import React from 'react';
 import { useFonts } from 'expo-font';
 import { StyleSheet, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 
-import RegistrationForm from '../Screens/RegistrationScreen';
+// import RegistrationForm from '../Screens/RegistrationScreen';
+import LoginScreen from '../Screens/LoginScreen';
 
 export default function HomeScreen() {
   const [fontsLoaded] = useFonts({
@@ -18,7 +18,8 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.safeArea}>
-      <RegistrationForm />
+      {/* <RegistrationForm /> */}
+      <LoginScreen/>
       </View>
   );
 }

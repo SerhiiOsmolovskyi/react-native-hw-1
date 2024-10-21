@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ImageBackground, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { styles } from '../styles/styles';
-import { AntDesign } from '@expo/vector-icons';
 
-export default function RegistrationForm() {
-  const [login, setLogin] = useState<string>(''); 
-  const [email, setEmail] = useState<string>('');
+export default function LoginScreen() {
+  const [email, setEmail] = useState<string>(''); 
   const [password, setPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
-  const handleRegister = (): void => {
-    console.log('Login:', login);
+  const handleLogin = (): void => {
     console.log('Email:', email);
     console.log('Password:', password);
   };
@@ -24,22 +21,7 @@ export default function RegistrationForm() {
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           >
             <View style={styles.container}>
-      
-              <View style={styles.avatar}>
-                <TouchableOpacity style={styles.addBtn}>
-                  <AntDesign name="plus" size={24} color="#FF6C00" />
-                </TouchableOpacity>
-              </View>
-
-              <Text style={styles.title}>Registration</Text>
-
-              <TextInput
-                style={styles.input}
-                placeholder="Login"
-                placeholderTextColor="#BDBDBD"
-                value={login}
-                onChangeText={setLogin}
-              />
+              <Text style={styles.title}>Login</Text>
 
               <TextInput
                 style={styles.input}
@@ -50,7 +32,6 @@ export default function RegistrationForm() {
                 keyboardType="email-address"
               />
 
-      
               <View style={styles.passwordContainer}>
                 <TextInput
                   style={{ ...styles.input, position: 'relative', width: '100%' }}
@@ -67,12 +48,11 @@ export default function RegistrationForm() {
                 </TouchableOpacity>
               </View>
 
-        
-              <TouchableOpacity style={styles.button} onPress={handleRegister}>
-                <Text style={styles.buttonText}>Sign Up</Text>
+              <TouchableOpacity style={styles.button} onPress={handleLogin}>
+                <Text style={styles.buttonText}>Sign In</Text>
               </TouchableOpacity>
 
-              <Text style={styles.loginText}>Already have an account? Login</Text>
+              <Text style={styles.loginText}>Don't have an account? Sign Up</Text>
             </View>
           </KeyboardAvoidingView>
         </ImageBackground>
