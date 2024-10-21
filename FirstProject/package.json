@@ -3,7 +3,6 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   
-  "homepage": "https://SerhiiOsmolovskyi.github.io/react-native-hw-1",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -11,9 +10,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "expo lint"
+
   },
   "jest": {
     "preset": "jest-expo"
