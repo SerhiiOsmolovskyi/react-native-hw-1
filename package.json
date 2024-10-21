@@ -2,5 +2,8 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/stack": "^6.4.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
